@@ -1,0 +1,681 @@
+
+    .courses-section {
+    padding: 10px 0;
+    font-family: 'Segoe UI', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    
+    }
+
+    .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    }
+
+    .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    }
+
+    .col-lg-12 {
+    width: 100%;
+    padding: 0 15px;
+    }
+
+
+    .section-intro {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .intro-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #64748b;
+    font-weight: 400;
+    margin: 0;
+    }
+
+
+    .embla {
+    position: relative;
+    margin-bottom: 60px;
+    }
+
+    .embla_viewport {
+    overflow: hidden;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .embla_container {
+    display: flex;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    }
+
+    .embla_slide {
+    position: relative;
+    flex: 0 0 100%;
+    min-width: 0;
+    padding: 20px;
+    }
+
+
+    .course-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .card-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    }
+
+    .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    }
+
+    .course-card:hover .card-image img {
+    transform: scale(1.05);
+    }
+
+    .card-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background:var(--light-blue);
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    
+    }
+
+    .card-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .course-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 10px 0;
+    line-height: 1.3;
+    }
+
+    .institution {
+    font-size: 16px;
+    color: #64748b;
+    margin: 0 0 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    }
+
+    .institution i {
+    color: #656565;
+    }
+
+    .course-description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #6b7280;
+    margin: 0 0 20px 0;
+    flex-grow: 1;
+    }
+
+
+    .skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+    }
+
+    .skill-tag {
+    background: rgba(59, 130, 246, 0.05);
+    border-left: 4px solid var(--light-blue);
+    color: #4a5568;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid #dbeafe;
+    transition: all 0.2s ease;
+    }
+
+    .skill-tag:hover {
+    background: #dbeafe;
+    transform: translateY(-1px);
+    }
+
+    .card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #f1f5f9;
+    }
+
+    .view-cert-btn {
+    background: var(--light-blue);
+    color: white;
+    border: 2px solid transparent;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.7s ease;
+    
+    cursor: pointer;
+    }
+
+    .view-cert-btn:hover {
+    background: var(--light-blue);
+    color: white;
+    }
+
+    .save-btn {
+    background: transparent;
+    border: 2px solid #e5e7eb;
+    color: #9ca3af;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    }
+
+    .save-btn:hover {
+    border-color: #0000006b;
+    color: #00000077;
+    transform: scale(1.1);
+    }
+
+
+    .embla_controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+    }
+
+    .embla_buttons {
+    display: flex;
+    gap: 15px;
+    }
+
+    .embla_button {
+    color: rgba(85, 85, 85, 0.963);
+    background: rgba(209, 209, 209, 0.695);
+
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    
+    }
+
+    .embla_button:hover:not(:disabled) {
+    background: #ebebebe9;
+    
+    
+    }
+
+    .embla_button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    }
+
+    .embla_button_svg {
+    width: 24px;
+    height: 24px;
+    }
+
+    .embla_button:hover:not(:disabled) .embla_button_svg {
+    color: rgba(85, 85, 85, 0.963);
+    }
+
+    .embla_progress {
+    width: 100%;
+    max-width: 400px;
+    height: 15px;
+    background: #cbcbce;
+    border-radius: 10px;
+    overflow: hidden;
+    }
+
+    .embla_progress_bar {
+    height: 110%;
+    background: rgba(241, 240, 240, 0.89);
+    border-radius: 0px;
+    
+    }
+
+
+    .stats-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 60px;
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0px 20px 0px rgba(189, 189, 189, 0.544);
+    }
+
+    .stat-item {
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    }
+
+    .stat-item:hover {
+    transform: translateY(-5px);
+    }
+
+    .stat-item h3 {
+    font-size: 36px;
+    font-weight: 800;
+    background: var(--light-blue);
+    margin: 0 0 10px 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    }
+
+    .stat-item p {
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+    margin: 0;
+    }
+
+
+    @media (min-width: 768px) {
+    .container {
+        padding: 0 30px;
+    }
+    
+    .embla_slide {
+        flex: 0 0 50%;
+        padding: 15px;
+    }
+    
+    .stats-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        padding: 30px;
+    }
+    
+    .stat-item {
+        padding: 15px;
+    }
+    
+    .stat-item h3 {
+        font-size: 32px;
+    }
+    
+    .card-image {
+        height: 180px;
+    }
+    }
+
+    @media (min-width: 1024px) {
+    .courses-section {
+        padding: 10px 0;
+    }
+    
+    .embla_slide {
+        flex: 0 0 33.333%;
+        padding: 15px;
+    }
+    
+    .card-image {
+        height: 200px;
+    }
+    
+    .intro-text {
+        font-size: 20px;
+    }
+    
+    .stats-container {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    }
+
+
+    @media (max-width: 767px) {
+    .courses-section {
+        padding: 60px 0;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .section-intro {
+        margin-bottom: 40px;
+    }
+    
+    .intro-text {
+        font-size: 16px;
+    }
+    
+    .embla_slide {
+        padding: 10px;
+    }
+    
+    .card-content {
+        padding: 20px;
+    }
+    
+    .course-title {
+        font-size: 20px;
+    }
+    
+    .card-actions {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .view-cert-btn {
+        justify-content: center;
+    }
+    
+    .embla_button {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .stats-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 25px;
+    }
+    
+    .stat-item {
+        padding: 15px;
+    }
+    
+    .stat-item h3 {
+        font-size: 28px;
+    }
+    }
+
+    @media (max-width: 480px) {
+    .embla_controls {
+        gap: 15px;
+    }
+    
+    .embla_buttons {
+        gap: 10px;
+    }
+    
+    .skills-tags {
+        justify-content: center;
+    }
+    
+    .card-image {
+        height: 180px;
+    }
+    
+    .course-description {
+        text-align: center;
+    }
+    
+    .institution {
+        justify-content: center;
+    }
+    }
+
+
+    .embla_button:active:not(:disabled) {
+    transform: scale(0.95);
+    }
+
+    .view-cert-btn:active {
+    transform: translateY(0);
+    }
+
+
+
+
+    @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+
+    .course-card {
+    animation: fadeInUp 0.5s ease forwards;
+    }
+
+    .embla_slide:nth-child(1) .course-card { animation-delay: 0.1s; }
+    .embla_slide:nth-child(2) .course-card { animation-delay: 0.2s; }
+    .embla_slide:nth-child(3) .course-card { animation-delay: 0.3s; }
+    .embla_slide:nth-child(4) .course-card { animation-delay: 0.4s; }
+    .embla_slide:nth-child(5) .course-card { animation-delay: 0.5s; }
+
+
+    .pdf-certificates-section {
+    padding-top: 70px;
+    }
+
+    .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+    }
+
+    .section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+    }
+
+    .section-subtitle {
+    font-size: 0.95rem;
+    color: #4a4b4a;
+    font-weight: 400;
+    }
+
+    .pdf-embla {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    }
+
+    .pdf-embla_viewport {
+    overflow: hidden;
+    }
+
+    .pdf-embla_container {
+    display: flex;
+    gap: 10px;
+    
+    }
+
+    .pdf-embla_slide {
+    flex: 0 0 270px;
+    min-width: 0;
+    }
+
+    .pdf-certificate-card {
+    background: transparent;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    }
+
+
+    .pdf-card-image-container {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 0px 54px -8px rgba(0, 0, 0, 0.219);
+    }
+
+    .pdf-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+    }
+
+    .pdf-certificate-card:hover .pdf-card-image {
+    transform: scale(1.09);
+    
+    }
+
+    .pdf-hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(81, 82, 81, 0.326);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+    }
+
+    .pdf-certificate-card:hover .pdf-hover-overlay {
+    opacity: 1;
+    }
+
+    .pdf-hover-text {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    }
+
+    .pdf-card-content {
+    padding: 16px 4px 8px 4px;
+    text-align: center;
+    }
+
+    .pdf-card-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color:  #000000ae;
+    margin-bottom: 4px;
+    line-height: 1.3;
+    letter-spacing: -0.3px;
+    }
+
+    .pdf-card-subtitle {
+    font-size: 0.45rem;
+    color: #5e5e5e;
+    font-weight: 400;
+    line-height: 1.4;
+    }
+
+    @media (max-width: 1024px) {
+    .pdf-embla_slide {
+        flex: 0 0 240px;
+    }
+    
+    .pdf-card-image-container {
+        height: 160px;
+    }
+    }
+
+    @media (max-width: 768px) {
+    .pdf-embla_slide {
+        flex: 0 0 220px;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .pdf-card-image-container {
+        height: 150px;
+    }
+    
+    .pdf-embla_container {
+        gap: 20px;
+    }
+    }
+
+    @media (max-width: 480px) {
+    .pdf-embla_slide {
+        flex: 0 0 200px;
+    }
+    
+    .pdf-certificates-section {
+        margin-top: 50px;
+        padding-top: 40px;
+    }
+    
+    .pdf-card-image-container {
+        height: 140px;
+    }
+    
+    .pdf-card-title {
+        font-size: 0.95rem;
+    }
+    
+    .pdf-card-subtitle {
+        font-size: 0.8rem;
+    }
+    }
