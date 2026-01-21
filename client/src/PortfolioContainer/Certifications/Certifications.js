@@ -172,8 +172,17 @@ export default function Certifications(props) {
         Animations.animations.fadeInScreen(props.id);
     };
 
-    const fadeInSubscription =
-        ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+        useEffect(() => {
+                
+                const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+                
+                
+                return () => {
+                    if (fadeInSubscription) {
+                        fadeInSubscription.unsubscribe();
+                    }
+                };
+            }, [props.id]); 
 
     const [emblaRef, emblaApi] = useEmblaCarousel(
         { 
@@ -223,14 +232,14 @@ export default function Certifications(props) {
         emblaApi.on("slideFocus", applyProgress);
         
         return () => {
-            fadeInSubscription.unsubscribe();
+            
             emblaApi.off("select", onSelect);
             emblaApi.off("scroll", onScroll);
             emblaApi.off("init", applyProgress);
             emblaApi.off("reInit", applyProgress);
             emblaApi.off("slideFocus", applyProgress);
         };
-    }, [emblaApi, onSelect, onScroll, fadeInSubscription]);
+    }, [emblaApi, onSelect, onScroll]);
 
     const courses = [
         {
@@ -291,7 +300,7 @@ export default function Certifications(props) {
                 title={"Courses & Certifications"}
                 subHeading={"My Professional Development Journey"}
             />
-            <section className="courses-section" id={props.id || ""}>
+            <section className="courses-section fade-in" id={props.id || ""}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ScreenHeading from '../../utilities/ScreenHeading/ScreenHeading'
 import ScrollService from '../../utilities/ScrollService'
 import Animations from '../../utilities/Animations'
@@ -11,7 +11,17 @@ export default function AboutMe(props) {
         Animations.animations.fadeInScreen(props.id);
     };
 
-    const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+    useEffect(() => {
+        
+        const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+        
+        
+        return () => {
+            if (fadeInSubscription) {
+                fadeInSubscription.unsubscribe();
+            }
+        };
+    }, [props.id]); 
 
     const SCREEN_CONSTANTS = {
         description: "I am a Software Development Engineer. I enjoy learning new things, experimenting with technologies, and turning ideas into real solutions. I am looking to continue growing and contribute value to projects where code has a purpose.",
@@ -38,8 +48,9 @@ export default function AboutMe(props) {
             ))
         )
     }
+    
     return (
-        <div className='about-me-container screen-container' id={props.id || ""}>
+        <div className='about-me-container screen-container fade-in' id={props.id || ""}>
             <div className='about-me-parent'>
                 <ScreenHeading title={'About Me'} subHeading={'Why Choose Me'} />
                 <div className='about-me-card'>
