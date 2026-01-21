@@ -14,13 +14,15 @@ export default function AboutMe(props) {
     const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
     const SCREEN_CONSTANTS = {
-        description: "Passionate about continuous learning and problem-solving. Currently building my career as a Software Development Engineer, eager to grow through new challenges and contribute with efficient, practical solutions in dynamic and improvement- driven environments.",
+        description: "I am a Software Development Engineer. I enjoy learning new things, experimenting with technologies, and turning ideas into real solutions. I am looking to continue growing and contribute value to projects where code has a purpose.",
         highlights: {
             bullets: [
                 "Software Developer",
-                "Mobile App Developer (iOS)",
-                "Database Architecture",
-                "UI/UX Design"
+                "Python Fundamentals", 
+                "App & Web Design", 
+                "SQL Fundamentals", 
+                "HTML & CSS", 
+                "Git & GitHub"
             ],
             heading: "Here are a Few Highlights"
         }
