@@ -34,7 +34,7 @@ export default function ContactMe(props) {
     console.log(name);
 
     const submitForm = async (e) => {
-    console.log("SUBMIT EJECUTADO");
+    
     e.preventDefault();
 
     
@@ -46,11 +46,13 @@ export default function ContactMe(props) {
     try {
         setBool(true);
 
+        console.log("ANTES DE AXIOS");
         const res = await axios.post("/contact", {
         name,
         email,
         message,
         });
+        console.log("DESPUÉS DE AXIOS", res);
 
         if (res.status === 200) {
         toast.success(res.data.msg);
@@ -61,7 +63,7 @@ export default function ContactMe(props) {
 
         setBool(false);
     } catch (error) {
-        console.log(error);
+        console.log("ERROR AXIOS", error);
         setBool(false);
     }
     };
