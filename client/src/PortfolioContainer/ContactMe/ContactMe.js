@@ -33,37 +33,38 @@ export default function ContactMe(props) {
 
     console.log(name);
 
-    const submitForm = async(e) => {
-        e.preventDefault();
-        try{
-            let data = {
-            name,
-            email,
-            message,
-        }
+    const submitForm = async (e) => {
+    e.preventDefault();
+
+    
+    if (name.length === 0 || email.length === 0 || message.length === 0) {
+        toast.error("Please fill all the fields");
+        return;
+    }
+
+    try {
         setBool(true);
-        const res = await axios.post("/contact", data);
-        if(name.length === 0 || email.length === 0 || message.length === 0) {
-            setBanner(res.data.msg);
-            toast.error(res.data.msg);
-            setBool (false);
 
-        }else if(res.status === 200){
-            setBanner(res.data.msg);
-            toast.success(res.data.msg);
-            setBool (false);
+        const res = await axios.post("/contact", {
+        name,
+        email,
+        message,
+        });
 
-            setName("")
-            setEmail("")
-            setMessage("")
+        if (res.status === 200) {
+        toast.success(res.data.msg);
+        setName("");
+        setEmail("");
+        setMessage("");
         }
-            
-        }catch (error) {
-            console.log(error);
-        }
-        
-        
+
+        setBool(false);
+    } catch (error) {
+        console.log(error);
+        setBool(false);
+    }
     };
+
 
     const contactInfo = {
         phone: "+52 55 1234 5678",
