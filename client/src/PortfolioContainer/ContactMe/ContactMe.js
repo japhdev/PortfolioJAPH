@@ -34,6 +34,7 @@ export default function ContactMe(props) {
     console.log(name);
 
     const submitForm = async (e) => {
+    console.log("SUBMIT EJECUTADO");
     e.preventDefault();
 
     
