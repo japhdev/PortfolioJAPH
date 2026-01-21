@@ -1,55 +1,38 @@
 const router = require('express').Router()
-const nodemailer = require('nodemailer')
+const { Resend } = require('resend')
+
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 router.post('/contact', async (req, res) => {
-    const data = req.body
+    const { name, email, message } = req.body
 
-    if (!data.name || !data.email || !data.message) {
+    if (!name || !email || !message) {
         return res.status(400).json({ msg: "please fill all the fields" })
     }
 
     try {
-        const smtpTransporter = nodemailer.createTransport({
-            host: "smtp.gmail.com",
-            port: 465,
-            secure: true, 
-            auth: {
-                user: process.env.EMAIL_USER,
-                pass: process.env.EMAIL_PASS
-            }
-        })
+        console.log("📨 ENVIANDO CORREO CON RESEND...")
 
-        const mailOptions = {
-            from: `"${data.name}" <${process.env.EMAIL_USER}>`,
-            to: 'alan.hernandez.18400700@gmail.com',
-            replyTo: data.email,
-            subject: `New Message from ${data.name} - Portfolio Contact`,
+        await resend.emails.send({
+            from: 'Portfolio <onboarding@resend.dev>',
+            to: ['alan.hernandez.18400700@gmail.com'],
+            replyTo: email,
+            subject: `New message from ${name}`,
             html: `
                 <h2>New Portfolio Message</h2>
-                <p><strong>Name:</strong> ${data.name}</p>
-                <p><strong>Email:</strong> ${data.email}</p>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Email:</strong> ${email}</p>
                 <p><strong>Message:</strong></p>
-                <p>${data.message}</p>
-            `,
-            text: `
-Name: ${data.name}
-Email: ${data.email}
-Message:
-${data.message}
+                <p>${message}</p>
             `
-        }
+        })
 
-        console.log("📨 INTENTANDO ENVIAR CORREO...")
-
-        const info = await smtpTransporter.sendMail(mailOptions)
-
-        console.log("✅ CORREO ENVIADO:", info.response)
-
-        return res.status(200).json({ msg: "Thank you for contacting JAPH!" })
+        console.log("✅ CORREO ENVIADO CON RESEND")
+        res.status(200).json({ msg: "Thank you for contacting JAPH!" })
 
     } catch (error) {
-        console.error("❌ ERROR NODEMAILER:", error)
-        return res.status(500).json({ msg: "Mailer error" })
+        console.error("❌ ERROR RESEND:", error)
+        res.status(500).json({ msg: "Error sending email" })
     }
 })
 
