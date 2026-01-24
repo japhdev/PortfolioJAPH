@@ -11,35 +11,35 @@ const certificates = [
         id: 1,
         title: "Introducción a los negocios",
         subtitle: "Tutor junior",
-        image: "img/certificate/intro_1.jpg",
+        image: "img/intro_1.jpg",
         pdfUrl: "pdf/intro_1.pdf"
     },
     {
         id: 2,
         title: "Python Programming Fundamentals",
         subtitle: "Microsoft",
-        image: "img/certificate/Coursera.jpg",
+        image: "img/Coursera.jpg",
         pdfUrl: "pdf/Coursera_IRJTHYZ0ZS9I.pdf"
     },
     {
         id: 3,
         title: "Python Santander Open Academy",
         subtitle: "Santander Open Academy",
-        image: "img/certificate/Pyhon_Santander.jpg",
+        image: "img/Python_Santander.jpg",
         pdfUrl: "pdf/Copia de Certificado_Pyhon_Santander_page-0001.pdf"
     },
     {
         id: 4,
         title: "DS4B Analista de Datos",
         subtitle: "Primera Experiencia",
-        image: "img/certificate/certificate-of-completion-for-tu-primera-experiencia-como-analista-de-datos_page-0001.jpg",
+        image: "img/certificate-of-completion-for-tu-primera-experiencia-como-analista-de-datos_page-0001.jpg",
         pdfUrl: "pdf/certificate-of-completion-for-tu-primera-experiencia-como-analista-de-datos_page-0001.pdf"
     },
     {
         id: 5,
         title: "Estudios Concluidos",
         subtitle: "Ingeniero en Desarrollo de Software",
-        image: "img/certificate/1t8rckxe_1762887951009_page-0001.jpg",
+        image: "img/1t8rckxe_1762887951009_page-0001.jpg",
         pdfUrl: "pdf/1t8rckxe_1762887951009.pdf"
     }
 ];
@@ -244,53 +244,23 @@ export default function Certifications(props) {
     const courses = [
         {
             id: 1,
-            title: "Gestor de Horarios IOS",
-            institution: "Universidad internacional de México",
+            title: "iOS Schedule Manager",
+            institution: "Academic Project",
             date: "2024",
-            description: "Aplicación para la gestión de horarios en empresa con loggin y register",
-            image: "img/Certificate/App-IOS.jpg",
+            description: "Company Schedule Management App with Login & Registration",
+            image: "img/App-IOS.jpg",
             certificateUrl: "https://github.com/japhdev/App-Gestor-de-horarios.git",
             skills: ["Swift", "Data base", "UI UX", "FireBase"]
         },
         {
             id: 2,
-            title: "React.js Advanced Concepts",
-            institution: "Udemy",
-            date: "2023",
-            description: "Advanced React patterns, hooks, context API, performance optimization.",
-            image: "img/Certificate/App-IOS.jpg",
-            certificateUrl: "#",
-            skills: ["React", "Redux", "Hooks", "Context API"]
-        },
-        {
-            id: 3,
-            title: "AWS Certified Developer",
-            institution: "Amazon Web Services",
-            date: "2023",
-            description: "AWS services, serverless architecture, and cloud deployment strategies.",
-            image: "img/Certificate/App-IOS.jpg",
-            certificateUrl: "#",
-            skills: ["AWS", "Lambda", "S3", "DynamoDB"]
-        },
-        {
-            id: 4,
-            title: "UI/UX Design Fundamentals",
-            institution: "Google Career Certificates",
-            date: "2022",
-            description: "User-centered design, wireframing, prototyping, and usability testing.",
-            image: "img/Certificate/App-IOS.jpg",
-            certificateUrl: "#",
-            skills: ["Figma", "UI Design", "User Research", "Prototyping"]
-        },
-        {
-            id: 5,
-            title: "Python for Data Science",
-            institution: "DataCamp",
-            date: "2023",
-            description: "Data analysis, visualization, and machine learning with Python.",
-            image: "img/Certificate/App-IOS.jpg",
-            certificateUrl: "#",
-            skills: ["Python", "Pandas", "NumPy", "Matplotlib"]
+            title: "Portfolio Web JAPH",
+            institution: "Personal Project",
+            date: "2025",
+            description: "React-based web portfolio implementing basic React Hooks, RxJS, and reusable components. Features responsive UI with Bootstrap, mobile-friendly layout, smooth scrolling, fade-in animations, Embla Carousel integration, React Typical type effect, and downloadable PDF assets. Includes Resend email service integration and full deployment workflow with GitHub version control..",
+            image: "img/Portfolio-web.jpg",
+            certificateUrl: "https://github.com/japhdev/PorfolioRender.git",
+            skills: ["React.js", "Bootstrap", "Hooks", "Node.js"]
         }
     ];
 
