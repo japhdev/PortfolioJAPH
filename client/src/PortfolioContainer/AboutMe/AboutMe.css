@@ -110,7 +110,15 @@
     background: rgba(247, 250, 252, 0.9);
     border-radius: 12px;
     border: 1px solid rgba(226, 232, 240, 0.8);
+    overflow-y: auto;
+    max-height: 300px;
     }
+    .about-me-highlights::-webkit-scrollbar-thumb {
+    background: #a3a4a7;
+    border-radius: 5px;
+    border: 1px solid #d3d3d3; 
+}
+
 
     .highlight-heading {
     font-family: "Poppins Bold", sans-serif;

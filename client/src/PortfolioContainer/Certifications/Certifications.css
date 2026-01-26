@@ -149,7 +149,14 @@
     color: #6b7280;
     margin: 0 0 20px 0;
     flex-grow: 1;
+    overflow-y: auto;
+    max-height: 100px;
     }
+    .course-description::-webkit-scrollbar-thumb {
+    background: #a3a4a7;
+    border-radius: 5px;
+    border: 1px solid #d3d3d3; 
+}
 
 
     .skills-tags {
