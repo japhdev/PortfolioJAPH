@@ -6,6 +6,7 @@ import { ReactTyped } from "react-typed";
 import "./ContactMe.css";
 import axios from 'axios';
 import {toast} from 'react-toastify';
+import Footer from "../Footer/Footer";
 
 export default function ContactMe(props) {
     let fadeInScreenHandler = (screen) => {
@@ -191,6 +192,8 @@ export default function ContactMe(props) {
                     
                 </div>
             </div>
+            <hr />
+            <Footer/>
         </div>
     );
 }

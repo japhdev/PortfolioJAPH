@@ -258,9 +258,19 @@ export default function Certifications(props) {
             institution: "Personal Project",
             date: "2025",
             description: "React-based web portfolio implementing basic React Hooks, RxJS, and reusable components. Features responsive UI with Bootstrap, mobile-friendly layout, smooth scrolling, fade-in animations, Embla Carousel integration, React Typical type effect, and downloadable PDF assets. Includes Resend email service integration and full deployment workflow with GitHub version control..",
-            image: "img/Portfolio-web.jpg",
+            image: "img/Portfolio-Web.jpg",
             certificateUrl: "https://github.com/japhdev/PorfolioRender.git",
             skills: ["React.js", "Bootstrap", "Hooks", "Node.js"]
+        },
+        {
+            id: 3,
+            title: "iOS Schedule Manager",
+            institution: "Academic Project",
+            date: "2024",
+            description: "Company Schedule Management App with Login & Registration",
+            image: "img/App-IOS.jpg",
+            certificateUrl: "https://github.com/japhdev/App-Gestor-de-horarios.git",
+            skills: ["Swift", "Data base", "UI UX", "FireBase"]
         }
     ];
 
