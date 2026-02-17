@@ -11,8 +11,6 @@ router.post('/contact', async (req, res) => {
     }
 
     try {
-        console.log("📨 ENVIANDO CORREO CON RESEND...")
-
         await resend.emails.send({
             from: 'Portfolio <onboarding@resend.dev>',
             to: ['alan.hernandez.18400700@gmail.com'],
