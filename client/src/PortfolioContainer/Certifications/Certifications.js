@@ -179,8 +179,8 @@ const PdfCertificatesCarousel = () => {
                     </div>
                 </div>
                 <p className="note-certificate">
-                                                <strong>Note:</strong> Certificates are not publicly displayed for confidentiality purposes; however, they are available upon request.
-                                                </p>
+                    <strong>Note:</strong> Certificates are not publicly displayed for confidentiality purposes; however, they are available upon request.
+                </p>
             </div>
         </div>
     );

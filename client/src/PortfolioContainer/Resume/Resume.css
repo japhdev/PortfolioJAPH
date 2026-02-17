@@ -452,7 +452,7 @@
     }
     
     .skill-parent {
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
         gap: 12px;
         min-height: 60px;
@@ -463,8 +463,8 @@
     }
     
     .skill-percentage {
-        width: 100%;
-        min-width: 100%;
+        width: 50%;
+        min-width: 50%;
     }
     }
 
@@ -563,6 +563,25 @@
     .programming-skills-container {
         gap: 20px;
         min-height: 350px;
+    }
+    .skill-percentage {
+    flex: 1;
+    height: 30px;
+    background: #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    min-width: 200px;
+    }
+
+    .active-percentage {
+    height: 70%;
+    margin: 5px 0 0 5px;
+    background: linear-gradient(90deg, #8787876d);
+    border-radius: 20px;
+    position: relative;
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: skillLoad 1s ease-out;
     }
     
     .skill-parent span {
