@@ -9,38 +9,52 @@ import "./Certifications.css";
 const certificates = [
     {
         id: 1,
-        title: "Introducción a los negocios",
-        subtitle: "Tutor junior",
-        image: "img/intro_1.jpg",
-        pdfUrl: "pdf/intro_1.pdf"
+        title: "Python Programming Fundamentals – Microsoft",
+        subtitle: "Course focused on Python fundamentals, problem-solving, and programming logic.",
+        image: "img/certificate/Certificate-Microsoft-Python-Programming-Fundamentals.jpg",
+        pdfUrl: ""
     },
     {
         id: 2,
-        title: "Python Programming Fundamentals",
-        subtitle: "Microsoft",
-        image: "img/Coursera.jpg",
-        pdfUrl: "pdf/Coursera_IRJTHYZ0ZS9I.pdf"
+        title: "Python Santander Open Academy",
+        subtitle: "Santander Open Academy",
+        image: "img/certificate/Certificate-Python-Santander.jpg",
+        pdfUrl: ""
     },
     {
         id: 3,
-        title: "Python Santander Open Academy",
-        subtitle: "Santander Open Academy",
-        image: "img/Python_Santander.jpg",
-        pdfUrl: "pdf/Copia de Certificado_Pyhon_Santander_page-0001.pdf"
+        title: "First Experience as Data Analyst – Python & Power BI",
+        subtitle: "Developed a data analysis project using Python (Pandas).",
+        image: "img/certificate/Certificate-Data-Analysis.jpg",
+        pdfUrl: ""
     },
     {
         id: 4,
-        title: "DS4B Analista de Datos",
-        subtitle: "Primera Experiencia",
-        image: "img/certificate-of-completion-for-tu-primera-experiencia-como-analista-de-datos_page-0001.jpg",
-        pdfUrl: "pdf/certificate-of-completion-for-tu-primera-experiencia-como-analista-de-datos_page-0001.pdf"
+        title: "Certificate of Completion of Studies",
+        subtitle: "Successfully completed all academic requirements of the Software Development Engineering.",
+        image: "img/certificate/UIM-Certificate-of-Completion.jpg",
+        pdfUrl: ""
     },
     {
         id: 5,
-        title: "Estudios Concluidos",
-        subtitle: "Ingeniero en Desarrollo de Software",
-        image: "img/1t8rckxe_1762887951009_page-0001.jpg",
-        pdfUrl: "pdf/1t8rckxe_1762887951009.pdf"
+        title: "Introduction to Business I",
+        subtitle: "Studied fundamental business.",
+        image: "img/certificate/UIM-Introduction-to-Business-1.jpg",
+        pdfUrl: ""
+    },
+    {
+        id: 6,
+        title: "Junior Tutor – Interface Design I",
+        subtitle: "Supporting students in user interface principles, usability concepts, and practical UI.",
+        image: "img/certificate/UIM-Interface-Design-1.jpg",
+        pdfUrl: ""
+    },
+    {
+        id: 7,
+        title: "Operating Systems I – Certificate",
+        subtitle: "Supporting students in operating system fundamentals.",
+        image: "img/certificate/UIM-Operating-Systems-1.jpg",
+        pdfUrl: ""
     }
 ];
 
@@ -153,7 +167,10 @@ const PdfCertificatesCarousel = () => {
                                                     <h3 className="pdf-card-title">{cert.title}</h3>
                                                     <p className="pdf-card-subtitle">{cert.subtitle}</p>
                                                 </div>
+                                                
+
                                             </div>
+                                            
                                         </div>
                                     ))}
                                 </div>
@@ -161,6 +178,9 @@ const PdfCertificatesCarousel = () => {
                         </div>
                     </div>
                 </div>
+                <p className="note-certificate">
+                                                <strong>Note:</strong> Certificates are not publicly displayed for confidentiality purposes; however, they are available upon request.
+                                                </p>
             </div>
         </div>
     );
@@ -248,7 +268,7 @@ export default function Certifications(props) {
             institution: "Academic Project",
             date: "2024",
             description: "Company Schedule Management App with Login & Registration",
-            image: "img/App-IOS.jpg",
+            image: "img/projects/mobile_application_ios.jpg",
             certificateUrl: "https://github.com/japhdev/App-Gestor-de-horarios.git",
             skills: ["Swift", "Data base", "UI UX", "FireBase"]
         },
@@ -258,19 +278,29 @@ export default function Certifications(props) {
             institution: "Personal Project",
             date: "2025",
             description: "React-based web portfolio implementing basic React Hooks, RxJS, and reusable components. Features responsive UI with Bootstrap, mobile-friendly layout, smooth scrolling, fade-in animations, Embla Carousel integration, React Typical type effect, and downloadable PDF assets. Includes Resend email service integration and full deployment workflow with GitHub version control..",
-            image: "img/Portfolio-Web.jpg",
+            image: "img/projects/portfolio-web_JAPHdev.jpg",
             certificateUrl: "https://github.com/japhdev/PorfolioRender.git",
             skills: ["React.js", "Bootstrap", "Hooks", "Node.js"]
         },
         {
             id: 3,
-            title: "iOS Schedule Manager",
-            institution: "Academic Project",
-            date: "2024",
-            description: "Company Schedule Management App with Login & Registration",
-            image: "img/App-IOS.jpg",
-            certificateUrl: "https://github.com/japhdev/App-Gestor-de-horarios.git",
-            skills: ["Swift", "Data base", "UI UX", "FireBase"]
+            title: "Portfolio Demo",
+            institution: "Personal Project",
+            date: "2025",
+            description: "Personal portfolio web application built with Python and Flask, using HTML, CSS, and JavaScript for the frontend. The project showcases backend logic, routing, templates, and responsive design, integrating dynamic content and clean UI practices.",
+            image: "img/projects/portfolio_beta.jpg",
+            certificateUrl: "https://github.com/japhdev/portfolio-website.git",
+            skills: ["Python", "HTML", "CSS", "Flask", "Flask-Mail"]
+        },
+        {
+            id: 4,
+            title: "First Experience in Data Analysis",
+            institution: "DS4B",
+            date: "2025",
+            description: "In this project, I worked with a dataset of more than 5 million transaction records stored in SQLite. Using Python and Pandas, I performed data extraction, transformation, and analysis to generate meaningful business insights that were later visualized in a Power BI dashboard.",
+            image: "img/projects/data_analysis.jpg",
+            certificateUrl: "https://github.com/japhdev/MarketBasketAnalusis.git",
+            skills: ["Python", "Pandas", "Power BI", "Market Basket Analysis"]
         }
     ];
 

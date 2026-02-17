@@ -339,6 +339,21 @@
     margin: 0;
     }
 
+    .note-certificate {
+        font-size: 0.9rem;
+        color: #6b806b;
+        margin-top: 1 rem;
+        text-align: center;
+        line-height: 1.5;
+    }
+    
+    .note-certificate strong {
+        color: #111827;
+        font-weight: 600;
+    }
+
+    
+
 
     @media (min-width: 768px) {
     .container {
