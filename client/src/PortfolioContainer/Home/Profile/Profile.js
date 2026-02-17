@@ -13,13 +13,13 @@ export default function Profile() {
                             <a href="https://github.com/japhdev">
                                 <i className="fa fa-github"></i>
                             </a>
-                            <a href="#">
+                            <a href="mailto:alan.hernandez.18400700@gmail.com">
                                 <i className="fa fa-google"></i>
                             </a>
-                            <a href="#">
-                                <i className="fa fa-instagram"></i>
+                            <a href="https://www.linkedin.com/in/japhdev/">
+                                <i className="fa fa-linkedin"></i>
                             </a>
-                            <a href="#">
+                            <a href="https://x.com/JAPH_dev">
                                 <i className="fa fa-twitter"></i>
                             </a>
                         </div>
@@ -36,9 +36,9 @@ export default function Profile() {
                             {""}
                             <h1>
                                 {""}
-                                <ReactTyped
+                                <ReactTyped 
                                     strings={[
-                                        "Software Engineer",
+                                        "Software Engineer", 
                                         "Backend Developer",
                                         "Web Developer",
                                         "Mobile Developer",

@@ -136,10 +136,10 @@ export default function ContactMe(props) {
                             <a href={`mailto:${contactInfo.email}`} title="Email">
                                 <i className="fa fa-google"></i>
                             </a>
-                            <a href="#">
-                                <i className="fa fa-instagram"></i>
+                            <a href="https://www.linkedin.com/in/japhdev/">
+                                <i className="fa fa-linkedin"></i>
                             </a>
-                            <a href="#">
+                            <a href="https://x.com/JAPH_dev">
                                 <i className="fa fa-twitter"></i>
                             </a>
                     </div>
