@@ -12,49 +12,43 @@ const certificates = [
         title: "Python Programming Fundamentals – Microsoft",
         subtitle: "Course focused on Python fundamentals, problem-solving, and programming logic.",
         image: "img/certificate/Certificate-Microsoft-Python-Programming-Fundamentals.jpg",
-        pdfUrl: ""
+    
     },
     {
         id: 2,
         title: "Python Santander Open Academy",
         subtitle: "Santander Open Academy",
         image: "img/certificate/Certificate-Python-Santander.jpg",
-        pdfUrl: ""
     },
     {
         id: 3,
         title: "First Experience as Data Analyst – Python & Power BI",
         subtitle: "Developed a data analysis project using Python (Pandas).",
         image: "img/certificate/Certificate-Data-Analysis.jpg",
-        pdfUrl: ""
     },
     {
         id: 4,
         title: "Certificate of Completion of Studies",
         subtitle: "Successfully completed all academic requirements of the Software Development Engineering.",
         image: "img/certificate/UIM-Certificate-of-Completion.jpg",
-        pdfUrl: ""
     },
     {
         id: 5,
         title: "Introduction to Business I",
         subtitle: "Studied fundamental business.",
         image: "img/certificate/UIM-Introduction-to-Business-1.jpg",
-        pdfUrl: ""
     },
     {
         id: 6,
         title: "Junior Tutor – Interface Design I",
         subtitle: "Supporting students in user interface principles, usability concepts, and practical UI.",
         image: "img/certificate/UIM-Interface-Design-1.jpg",
-        pdfUrl: ""
     },
     {
         id: 7,
         title: "Operating Systems I – Certificate",
         subtitle: "Supporting students in operating system fundamentals.",
         image: "img/certificate/UIM-Operating-Systems-1.jpg",
-        pdfUrl: ""
     }
 ];
 
@@ -137,17 +131,15 @@ const PdfCertificatesCarousel = () => {
                                 <div className="pdf-embla_container">
                                     {certificates.map((cert) => (
                                         <div className="pdf-embla_slide" key={cert.id}>
-                                            <div 
-                                                className="pdf-certificate-card"
-                                                onClick={() => window.open(cert.pdfUrl, '_blank')}
-                                                role="button"
-                                                tabIndex={0}
-                                                onKeyPress={(e) => {
-                                                    if (e.key === 'Enter') {
-                                                        window.open(cert.pdfUrl, '_blank');
-                                                    }
-                                                }}
-                                            >
+                                            
+                                            {/* onClick opens PDF - temporarily disabled, use onCertClick instead */}
+                                                <div 
+                                                    className="pdf-certificate-card"
+                                                    onClick={() => {}}
+                                                    role={undefined}
+                                                    tabIndex={undefined}
+                                                    onKeyPress={() => {}}
+                                                >
                                                 <div className="pdf-card-image-container">
                                                     <img 
                                                         src={cert.image} 
@@ -158,9 +150,10 @@ const PdfCertificatesCarousel = () => {
                                                             e.target.src = createErrorSVG(cert.title);
                                                         }}
                                                     />
-                                                    <div className="pdf-hover-overlay">
+                                                    {/* <div className="pdf-hover-overlay">
                                                         <span className="pdf-hover-text">View PDF</span>
-                                                    </div>
+                                                    </div> */}
+                                                    
                                                 </div>
                                                 
                                                 <div className="pdf-card-content">
