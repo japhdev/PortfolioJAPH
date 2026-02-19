@@ -90,7 +90,7 @@ export default function Resume(props) {
         <div className='resume-screen-container' key="education">
             <ResumeHeading
                 heading={"Universidad México Internacional"}
-                subHeading={"SOFTWARE DEVELOPMENT ENGINEERING"}
+                subHeading={"Software Development Engineering"}
                 fromDate={"2021"}
                 toDate={"2025"}
             />
