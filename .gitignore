@@ -1,0 +1,4 @@
+# Abre o crea el archivo .gitignore y agrega:
+.env
+.env.local
+.env.production
