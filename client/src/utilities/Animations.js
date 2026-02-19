@@ -5,8 +5,9 @@ export default class Animations {
         const screen = document.getElementById(screen_name);
         if (!screen) return;
 
-        screen.style.opacity = "1";
-        screen.style.transform = "translateY(0)";
-        
+        requestAnimationFrame(() => {
+            screen.style.opacity = "1";
+            screen.style.transform = "translateY(0)";
+        });
     };
 }

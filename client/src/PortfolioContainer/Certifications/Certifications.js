@@ -306,11 +306,11 @@ export default function Certifications(props) {
 
     return (
         <div>
+            <section className="courses-section fade-in" id={props.id || ""}>
             <ScreenHeading
                 title={"Courses & Certifications"}
                 subHeading={"My Professional Development"}
             />
-            <section className="courses-section fade-in" id={props.id || ""}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">

@@ -5,23 +5,25 @@ import Animations from '../../utilities/Animations'
 import './Resume.css'
 
 export default function Resume(props) {
-    const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
-
     let fadeInScreenHandler = (screen) => {
-        if (screen.fadeInScreen !== props.id) return;
+        if (screen.fadeInScreen !== props.id)
+            return;
         Animations.animations.fadeInScreen(props.id);
     };
-        useEffect(() => {
-            
-            const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
-            
-            
-            return () => {
-                if (fadeInSubscription) {
-                    fadeInSubscription.unsubscribe();
-                }
-            };
-        }, [props.id]); 
+
+    useEffect(() => {
+        
+        const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+        
+        
+        return () => {
+            if (fadeInSubscription) {
+                fadeInSubscription.unsubscribe();
+            }
+        };
+    }, [props.id]);  
+
+    const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
 
     const ResumeHeading = (props) => {
         return (

@@ -37,6 +37,7 @@ export default function Profile() {
                             <h1>
                                 {""}
                                 <ReactTyped 
+                                    
                                     strings={[
                                         "Software Engineer", 
                                         "Backend Developer",
@@ -46,6 +47,9 @@ export default function Profile() {
                                     typeSpeed={50}
                                     backSpeed={50}
                                     backDelay={3000}
+                                    startDelay={300}
+                                    showCursor={true}
+                                    cursorChar="|"
                                     loop
                                 />
                             </h1>
@@ -68,18 +72,6 @@ export default function Profile() {
                         </a>
                     </div>
                 </div>
-                {/*
-                <div className='footer-container'>
-            <div className='footer-parent'>
-                <img src={require ('../../../assets//Home/Adobe Express - file.png')} alt='no internet connection'/>
-            </div>
-
-        </div>
-                
-                <div className="profile-picture">
-                    <div className="profile-picture-background"></div>
-                </div>
-                */}
             </div>
         </div>
     );
