@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;
     gap: 60px;
-    margin-bottom: 120px;
+    margin-bottom: 80px;
 }
 
 .col {
@@ -67,6 +67,7 @@
 
 .contact-details {
     flex: 1;
+    word-break: break-all;
 }
 
 .contact-details h4 {
@@ -139,8 +140,6 @@
 }
 
 .back-form {
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0px 0px 0px 10px rgba(171, 168, 168, 0.225);
@@ -255,6 +254,8 @@ textarea {
     .col {
         flex: 1;
         text-align: left;
+        align-items: center;
+        justify-items: center;
     }
 
     .title {
@@ -300,6 +301,7 @@ textarea {
     .central-form {
         margin-top: 40px;
         gap: 30px;
+        padding: 0 20px;
     }
 
     .title {
@@ -308,11 +310,27 @@ textarea {
     }
 
     .back-form {
-        padding: 30px;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    input, textarea {
+        padding: 12px 14px;
+        font-size: 0.9rem;
+    }
+
+    textarea {
+        min-height: 120px;
+    }
+
+    .send-btn button {
+        width: 100%;
+        padding: 12px 20px;
     }
 
     .img-back h4 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     
     .contact-item {
@@ -348,11 +366,12 @@ textarea {
     }
 
     .back-form {
-        padding: 20px;
+        padding: 15px;
+        box-shadow: 0px 0px 0px 10px rgba(171, 168, 168, 0.225);
     }
 
     input, textarea {
-        padding: 14px;
+        padding: 10px 12px;
     }
 
     .send-btn button {

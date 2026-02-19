@@ -496,8 +496,8 @@
     
     .resume-heading {
         padding: 18px;
-        min-height: 150px;
-        max-height: 150px;
+        min-height: 180px;
+        max-height: 180px;
         overflow-y: auto;
 
     }
