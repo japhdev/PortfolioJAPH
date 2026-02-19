@@ -267,7 +267,7 @@ export default function Certifications(props) {
             title: "iOS Schedule Manager",
             institution: "Academic Project",
             date: "2024",
-            description: "Company Schedule Management App with Login & Registration",
+            description: "A minimalist and intuitive iOS application designed to efficiently manage employee work schedules. It features secure registration and authentication powered by Firebase. The app also includes PDF export functionality, allowing schedules to be easily generated and shared across any platform.",
             image: "img/projects/mobile_application_ios.jpg",
             certificateUrl: "https://github.com/japhdev/App-Gestor-de-horarios.git",
             skills: ["Swift", "Data base", "UI UX", "FireBase"]
@@ -308,7 +308,7 @@ export default function Certifications(props) {
         <div>
             <ScreenHeading
                 title={"Courses & Certifications"}
-                subHeading={"My Professional Development Journey"}
+                subHeading={"My Professional Development"}
             />
             <section className="courses-section fade-in" id={props.id || ""}>
                 <div className="container">
