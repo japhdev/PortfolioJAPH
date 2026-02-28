@@ -269,7 +269,9 @@
     border: none;
     
     }
-
+    .embla_button:focus {
+    outline: none;
+}
     .embla_button:hover:not(:disabled) {
     background: #ebebebe9;
     

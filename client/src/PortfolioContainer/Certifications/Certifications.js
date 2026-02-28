@@ -293,7 +293,7 @@ export default function Certifications(props) {
             description: "In this project, I worked with a dataset of more than 5 million transaction records stored in SQLite. Using Python and Pandas, I performed data extraction, transformation, and analysis to generate meaningful business insights that were later visualized in a Power BI dashboard.",
             image: "img/projects/data_analysis.jpg",
             certificateUrl: "https://github.com/japhdev/MarketBasketAnalusis.git",
-            skills: ["Python", "Pandas", "Power BI", "Market Basket Analysis"]
+            skills: ["Python", "Pandas", "Power BI", "Market Analysis"]
         }
     ];
 

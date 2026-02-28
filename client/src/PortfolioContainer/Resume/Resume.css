@@ -198,9 +198,9 @@
     min-height: 140px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     position: relative;
     overflow: hidden;
+    
     }
 
     .resume-heading::before {
@@ -326,6 +326,7 @@
     margin-bottom: 8px;
     overflow-wrap: break-word;
     word-wrap: break-word;
+    
     }
 
     .resume-details-carousal::-webkit-scrollbar {
@@ -398,7 +399,7 @@
     }
     
     .resume-bullets {
-        padding: 20px 0;
+        padding: 10px 0;
     }
     
     .resume-bullets::after {
@@ -479,7 +480,7 @@
     }
     
     .bullets {
-        padding: 0 20px;
+        padding: 10px 20px;
         gap: 20px;
     }
     
@@ -495,9 +496,9 @@
     }
     
     .resume-heading {
-        padding: 18px;
-        min-height: 180px;
-        max-height: 180px;
+        padding: 10px;
+        min-height: 150px;
+        max-height: 160px;
         overflow-y: auto;
 
     }
@@ -570,17 +571,17 @@
     }
     .skill-percentage {
     flex: 1;
-    height: 30px;
+    height: 25px;
     background: #e2e8f0;
     border-radius: 20px;
     overflow: hidden;
     position: relative;
-    min-width: 200px;
+    min-width: 160px;
     }
 
     .active-percentage {
     height: 70%;
-    margin: 5px 0 0 5px;
+    margin: 4px 0 0 3px;
     background: linear-gradient(90deg, #8787876d);
     border-radius: 20px;
     position: relative;
