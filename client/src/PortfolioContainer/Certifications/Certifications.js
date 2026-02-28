@@ -385,7 +385,7 @@ export default function Certifications(props) {
                                     <p>Courses Completed</p>
                                 </div>
                                 <div className="stat-item">
-                                    <h3>300+</h3>
+                                    <h3>100+</h3>
                                     <p>Learning Hours</p>
                                 </div>
                                 <div className="stat-item">
