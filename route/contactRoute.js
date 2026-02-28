@@ -4,10 +4,28 @@ const { Resend } = require('resend')
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 router.post('/contact', async (req, res) => {
-    const { name, email, message } = req.body
+    let { name = '', email = '', message = '' } = req.body;
 
-    if (!name || !email || !message) {
-        return res.status(400).json({ msg: "please fill all the fields" })
+    
+    name = name.trim();
+    email = email.trim().toLowerCase();
+    message = message.trim();
+
+    
+    if (!name) {
+        return res.status(400).json({ msg: "Name is required" });
+    }
+    if (!email) {
+        return res.status(400).json({ msg: "Email is required" });
+    }
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        return res.status(400).json({ msg: "Enter a valid email address" });
+    }
+    if (!message) {
+        return res.status(400).json({ msg: "Message is required" });
+    }
+    else if (message.length < 10) {
+        return res.status(400).json({ msg: "Message must be at least 10 characters" });
     }
 
     try {
