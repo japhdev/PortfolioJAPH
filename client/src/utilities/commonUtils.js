@@ -20,11 +20,11 @@ export const TOTAL_SCREENS = [
     },
     {
         screen_name: "Certifications",
-        component: Certifications
+        component: Certifications,
     },
     {
         screen_name: "ContactMe",
-        component: ContactMe
+        component: ContactMe,
     }
     
 

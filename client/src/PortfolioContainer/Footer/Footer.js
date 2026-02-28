@@ -7,25 +7,20 @@ export default function Footer() {
             <div className="footer-parents">
                 <div className="footer-grid">
                     <div className="footer-details">
-                    
-                            <div className="header-logo">
-                                <span>JAPH Dev</span>
-                                
-                            </div>
-                            <p className="footer-description">
-                                <strong>Software Development Engineer</strong>
-                                
-                            </p>
-                            <p className="footer-description">
-                                
-                                Always learning and committed to continuous improvement.
-                            </p>
+                        <div className="header-logo">
+                            <span>JAPH Dev</span>
+                        </div>
+                        <p className="footer-description">
+                            <strong>Software Development Engineer</strong>
+                        </p>
+                        <p className="footer-description">
+                            Always learning and committed to continuous improvement.
+                        </p>
 
-                            <p className="footer-description"><tt>Portfolio v1.0 · 2025</tt></p>
-                    
-                        
+                        <p className="footer-description">
+                            <span>Portfolio v1.0 · 2025</span>
+                        </p>
                     </div>
-                    
 
                     <div className="footer-tech">
                         <p>Tech Stack</p>
@@ -33,7 +28,12 @@ export default function Footer() {
                         <p className="tech-title">Frontend</p>
                         <ul>
                             <li>
-                                <a href="https://react.dev/" title="React">
+                                <a
+                                    href="https://react.dev/"
+                                    title="React"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     React
                                 </a>
                             </li>
@@ -41,6 +41,8 @@ export default function Footer() {
                                 <a
                                     href="https://developer.mozilla.org/en-US/docs/Web/HTML"
                                     title="HTML"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     HTML
                                 </a>
@@ -49,12 +51,19 @@ export default function Footer() {
                                 <a
                                     href="https://developer.mozilla.org/en-US/docs/Web/CSS"
                                     title="CSS"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     CSS
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.embla-carousel.com/" title="Embla">
+                                <a
+                                    href="https://www.embla-carousel.com/"
+                                    title="Embla"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     Embla
                                 </a>
                             </li>
@@ -63,12 +72,22 @@ export default function Footer() {
                         <p className="tech-title">Backend</p>
                         <ul>
                             <li>
-                                <a href="https://nodejs.org/es" title="Node.js">
+                                <a
+                                    href="https://nodejs.org/es"
+                                    title="Node.js"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     Node.js
                                 </a>
                             </li>
                             <li>
-                                <a href="https://expressjs.com/" title="Express">
+                                <a
+                                    href="https://expressjs.com/"
+                                    title="Express"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     Express
                                 </a>
                             </li>
@@ -77,7 +96,12 @@ export default function Footer() {
                         <p className="tech-title">APIs & Services</p>
                         <ul>
                             <li>
-                                <a href="https://resend.com/" title="Resend">
+                                <a
+                                    href="https://resend.com/"
+                                    title="Resend"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     Resend
                                 </a>
                             </li>
@@ -90,8 +114,13 @@ export default function Footer() {
                         <div>
                             <div>
                                 <p>
-                                    <a href="#" title="GitHub Repository">
-                                        Personal Portfolio Web – React.js{" "}
+                                    <a
+                                        href="https://github.com/japhdev/PortfolioJAPH.git"
+                                        title="GitHub Repository"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Personal Portfolio Web – React.js
                                     </a>
                                 </p>
                                 <p>In Progress</p>
@@ -99,8 +128,12 @@ export default function Footer() {
 
                             <div>
                                 <p>
-                                    <a href="#" title="GitHub Repository">
-                                        {" "}
+                                    <a
+                                        href="https://github.com/japhdev/App-Gestor-de-horarios.git"
+                                        title="GitHub Repository"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
                                         Employee Schedule Manager (iOS)
                                     </a>
                                 </p>
@@ -112,7 +145,7 @@ export default function Footer() {
                 <hr />
                 <div>
                     <p className="footer-copyright">
-                        © Copyright 2025, All Rights Reserved by JAPH
+                        © Copyright 2026, All Rights Reserved by JAPH
                     </p>
                 </div>
             </div>

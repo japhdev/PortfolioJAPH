@@ -1,7 +1,7 @@
 import React from "react";
 import { ReactTyped } from "react-typed";
-import './Profile.css'
-import ScrollService from '../../../utilities/ScrollService'
+import "./Profile.css";
+import ScrollService from "../../../utilities/ScrollService";
 
 export default function Profile() {
     return (
@@ -10,16 +10,28 @@ export default function Profile() {
                 <div className="profile-details">
                     <div className="colz">
                         <div className="colz-icon">
-                            <a href="https://github.com/japhdev">
+                            <a
+                                href="https://github.com/japhdev"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 <i className="fa fa-github"></i>
                             </a>
                             <a href="mailto:alan.hernandez.18400700@gmail.com">
                                 <i className="fa fa-google"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/japhdev/">
+                            <a
+                                href="https://www.linkedin.com/in/japhdev/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 <i className="fa fa-linkedin"></i>
                             </a>
-                            <a href="https://x.com/JAPH_dev">
+                            <a
+                                href="https://x.com/JAPH_dev"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 <i className="fa fa-twitter"></i>
                             </a>
                         </div>
@@ -27,19 +39,15 @@ export default function Profile() {
 
                     <div className="profile-details-name">
                         <span className="primary-text">
-                            {""}
                             Hello, I'M <span className="highlighted-text">JAPH</span>
                         </span>
                     </div>
                     <div className="profile-details-role">
-                        <span className="primary-text">
-                            {""}
+                        <div className="primary-text">
                             <h1>
-                                {""}
-                                <ReactTyped 
-                                    
+                                <ReactTyped
                                     strings={[
-                                        "Software Engineer", 
+                                        "Software Engineer",
                                         "Backend Developer",
                                         "Web Developer",
                                         "Mobile Developer",
@@ -54,15 +62,16 @@ export default function Profile() {
                                 />
                             </h1>
                             <span className="profile-role-tagline">
-                                Building the future, one idea at a time.         
+                                Building the future, one idea at a time.
                             </span>
-                        </span>
+                        </div>
                     </div>
                     <div className="profile-options">
-                        <button className="btn primary-btn"
-                        onClick={() => ScrollService.scrollHandler.scrollToHireMe()}>
-                            {""}
-                            Contact Me{" "}
+                        <button
+                            className="btn primary-btn"
+                            onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
+                        >
+                            Contact Me
                         </button>
                         <a
                             href="curriculum_vitae.pdf"
