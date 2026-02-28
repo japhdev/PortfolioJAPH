@@ -65,7 +65,7 @@ export default function Profile() {
                             Contact Me{" "}
                         </button>
                         <a
-                            href="CurriculumVitae.pdf"
+                            href="curriculum_vitae.pdf"
                             download="Josue Alan Pablo Hernandez.pdf"
                         >
                             <button className="btn highlighted-btn">Get Resume</button>

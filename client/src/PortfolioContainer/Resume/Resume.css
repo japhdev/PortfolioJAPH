@@ -466,8 +466,9 @@
 
     @media (max-width: 640px) {
     .resume-content {
-        padding: 0 0 50px 0;
-        margin: 0 10px 0 10px;
+        margin-top: 20px;
+        gap: 30px;
+        padding: 0 20px;
     }
     
     .resume-card {
@@ -502,8 +503,8 @@
     }
     
     .heading-bullet {
-        flex-direction: column;
-        align-items: flex-start;
+        padding-top: 8px;
+        align-items: center;
         gap: 8px;
     }
     

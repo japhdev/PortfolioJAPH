@@ -106,8 +106,9 @@ hr {
 
 @media (max-width: 767px) {
     .footer-container {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        margin-top: 40px;
+        gap: 30px;
+        padding: 0 20px;
     }
 
     .footer-grid {

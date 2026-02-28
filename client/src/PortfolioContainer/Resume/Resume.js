@@ -159,16 +159,16 @@ export default function Resume(props) {
 
         <div className='resume-screen-container' key="interest">
             <ResumeHeading
-                heading='Teaching'
-                description='Apart from being a tech enthusiast and a code writer, i also love to ...'
+                heading='Software Development'
+                description='Passionate about building scalable web applications using modern technologies like JavaScript, React, Node.js and databases. Constantly improving my coding and problem-solving skills.'
             />
             <ResumeHeading
-                heading='Music'
-                description='Listening to soothing music is something i can never...'
+                heading='Continuous Learning'
+                description='Committed to learning new technologies, design patterns, and best practices in backend and frontend development to stay updated in the tech industry.'
             />
             <ResumeHeading
-                heading='Gaming'
-                description='I like to challenge my reflexes a lot while competing ...'
+                heading='Technology & Innovation'
+                description='Interested in artificial intelligence, automation, and building systems that improve business processes and user experience.'
             />
         </div>,
     ];
