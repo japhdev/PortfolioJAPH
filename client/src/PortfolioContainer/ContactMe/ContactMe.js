@@ -8,6 +8,7 @@ import axios from 'axios';
 import {toast} from 'react-toastify';
 import Footer from "../Footer/Footer";
 
+
 export default function ContactMe(props) {
     let fadeInScreenHandler = (screen) => {
         if (screen.fadeInScreen !== props.id) return;
@@ -19,24 +20,50 @@ export default function ContactMe(props) {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
-    
     const [bool, setBool] = useState(false);
 
-    const handleName = (e) => {
-        setName(e.target.value);
-    };
-    const handleEmail = (e) => {
-        setEmail(e.target.value);
-    };
-    const handleMessage = (e) => {
-        setMessage(e.target.value);
-    };
+    const [errors, setErrors] = useState({name: "", email:"", message:""});
 
-    console.log(name);
+    const handleName = (e) => { setName(e.target.value); };
+    const handleEmail = (e) => { setEmail(e.target.value); };
+    const handleMessage = (e) => { setMessage(e.target.value); };
+
+    const validateForm = () => {
+        let formErrors = {name: "", email:"", message:""}
+        let isValid = true
+
+        if (name.trim().length === 0) {
+            formErrors.name = "Name is required"
+            isValid = false
+        }
+
+        if (email.trim().length === 0){
+            formErrors.email = "Email is required"
+            isValid = false
+        }
+        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            formErrors.email = "Enter a valid email address"
+            isValid = false
+        }
+
+        if (message.trim().length === 0) {
+            formErrors.message = "Message is required"
+            isValid = false
+        }
+        else if (message.trim().length < 10) {
+            formErrors.message = "Message must be at least 10 characters"
+            isValid = false
+        }
+
+        setErrors(formErrors)
+        return isValid
+    }
 
     const submitForm = async(e) => {
         e.preventDefault();
-        console.log("SUBMIT EJECUTADO");
+
+        if (!validateForm()) return;
+        
         try{
             let data = {
             name,
@@ -44,10 +71,7 @@ export default function ContactMe(props) {
             message,
         }
         setBool(true);
-        console.log("DATA A ENVIAR 👉", data);
-    console.log("ANTES DE AXIOS");
         const res = await axios.post("/contact", data);
-        console.log("DESPUÉS DE AXIOS 👉", res);
         if(name.length === 0 || email.length === 0 || message.length === 0) {
             
             toast.error(res.data.msg);
@@ -57,17 +81,18 @@ export default function ContactMe(props) {
             
             toast.success(res.data.msg);
             setBool (false);
-
             setName("")
             setEmail("")
             setMessage("")
+            setErrors({ name: "", email: "", message: "" })
         }
             
         }catch (error) {
-            console.log(error);
+            toast.error("Error sending message, please try again");
             console.error("ERROR AXIOS ❌", error);
+        }finally {
+            setBool(false)
         }
-        
         
     };
 
@@ -102,8 +127,7 @@ export default function ContactMe(props) {
                                     {contactInfo.phone}
                                 </div>
                             </div>
-                        </div>                                                                                                                                                                                                                                                                                                                                                                                                      
-
+                        </div>                                                                     
                             <div className="contact-item">
                                 <div className="contact-icon">
                                     <i className="fa fa-envelope"></i>
@@ -156,7 +180,11 @@ export default function ContactMe(props) {
                                 <input type="text"
                                 placeholder="Your name"
                                 onChange={handleName}
-                                value={name}/>
+                                value={name}
+                                className={errors.name ? "error" : ""}
+                                
+                                />
+                                {errors.name && <span className="error-message">{errors.name}</span>}
                             </div>
 
                             <div className="form-group">
@@ -166,8 +194,9 @@ export default function ContactMe(props) {
                                     placeholder="your.email@example.com"
                                     onChange={handleEmail}
                                     value={email}
+                                    className={errors.email ? "error" : ""}
                                 />
-                                
+                                {errors.email && <span className="error-message">{errors.email}</span>}
                             </div>
 
                             <div className="form-group">
@@ -176,8 +205,10 @@ export default function ContactMe(props) {
                                     type="text"
                                     placeholder="Tell me about your project or inquiry..."
                                     onChange={handleMessage}
-                                value={message}
+                                    value={message}
+                                    className={errors.message ? "error" : ""}
                                 />
+                                {errors.message && <span className="error-message">{errors.message}</span>}
                             </div>
 
                             <div className="send-btn">
