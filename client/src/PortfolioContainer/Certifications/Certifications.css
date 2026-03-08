@@ -168,8 +168,12 @@
     .skills-tags {
     display: flex;
     flex-wrap: wrap;
+    height: 80px;
+    max-height: 80px;
     gap: 8px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+    overflow-y: auto;
+    
     }
 
     .skill-tag {
@@ -194,7 +198,7 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 20px;
-    border-top: 1px solid #f1f5f9;
+    border-top: 1px solid #dee1e4;
     }
 
     .view-cert-btn {

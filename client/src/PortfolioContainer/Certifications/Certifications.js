@@ -224,6 +224,17 @@ const PdfCertificatesCarousel = () => {
             certificateUrl: "https://github.com/japhdev/MarketBasketAnalusis.git",
             skills: ["Python", "Pandas", "Power BI", "Market Analysis"],
         },
+        {
+            id: 5,
+            title: "Inventory",
+            institution: "Personal Project",
+            date: "2026",
+            description:
+                "A full-stack web application for product and inventory management. It allows users to create, view, update, and delete products through a REST API built with FastAPI, connected to PostgreSQL, and a React frontend. The project also includes low-stock alerts and is currently implementing secure authentication using JWT, bcrypt, passlib, and datetime.",
+            image: "img/projects/inventory.jpg",
+            certificateUrl: "https://github.com/japhdev/inventory-app.git",
+            skills: ["Python", "FastAPI", "REST API", "PostgreSQL", "React", "Full-Stack Development"],
+        },
     ];
 
 export default function Certifications(props) {

@@ -115,12 +115,12 @@ export default function Footer() {
                             <div>
                                 <p>
                                     <a
-                                        href="https://github.com/japhdev/PortfolioJAPH.git"
+                                        href="https://github.com/japhdev/inventory-app.git"
                                         title="GitHub Repository"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        Personal Portfolio Web – React.js
+                                        Inventory-Full-Stack
                                     </a>
                                 </p>
                                 <p>In Progress</p>
@@ -129,15 +129,15 @@ export default function Footer() {
                             <div>
                                 <p>
                                     <a
-                                        href="https://github.com/japhdev/App-Gestor-de-horarios.git"
+                                        href="https://github.com/japhdev/PortfolioJAPH.git"
                                         title="GitHub Repository"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        Employee Schedule Manager (iOS)
+                                        Personal Portfolio Web – React.js
                                     </a>
                                 </p>
-                                <p>April, 2024</p>
+                                <p>2025</p>
                             </div>
                         </div>
                     </div>
