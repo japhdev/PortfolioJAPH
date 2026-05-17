@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { Resend } = require("resend");
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+
 
 const escapeHtml = (text) => {
     return text
@@ -12,6 +12,9 @@ const escapeHtml = (text) => {
 };
 
 router.post("/contact", async (req, res, next) => {
+
+    const resend = new Resend(process.env.RESEND_API_KEY); 
+    
     let { name = "", email = "", message = "" } = req.body;
 
     name = name.trim();
